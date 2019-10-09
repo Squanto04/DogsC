@@ -135,10 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				35E07789234E909A0011BAE2 /* JLBreedListTableViewController.swift */,
-				35E07788234E909A0011BAE2 /* Dogs-C-Bridging-Header.h */,
 				35E0778B234E90AD0011BAE2 /* JLSubBreedTableViewController.swift */,
 				35E0778D234E90C70011BAE2 /* JLImageCollectionViewController.swift */,
 				35E0778F234E90DA0011BAE2 /* JLDetailViewController.swift */,
+				35E07788234E909A0011BAE2 /* Dogs-C-Bridging-Header.h */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

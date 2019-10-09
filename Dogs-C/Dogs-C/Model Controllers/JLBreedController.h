@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JLBreedController : NSObject
 
-@property (nonatomic, copy) NSArray<JLBreed *> *breeds;
-
 + (instancetype)sharedInstance;
 
 - (void)fetchBreeds:(void(^)(NSArray<JLBreed *> *fetchedBreeds))completion;

@@ -11,6 +11,8 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class JLImageCollectionViewController: UICollectionViewController {
+    
+    var breeds: JLBreed?
 
     override func viewDidLoad() {
         super.viewDidLoad()

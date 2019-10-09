@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSString *name;
 @property (nonatomic, copy, readonly) NSArray *subBreeds;
-@property (nonatomic, copy, readonly, nullable) NSArray *imageURLs;
+@property (nonatomic, copy, readonly) NSArray *imageURLs;
 
 - (JLBreed *)initWithName:(NSString *)name
                 subBreeds:(NSArray *)subBreeds

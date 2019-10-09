@@ -32,7 +32,8 @@ static NSString * const kImagesKey = @"images";
     NSURL *baseURL = [NSURL URLWithString:kBaseURLString];
     NSURL *breedsURL = [baseURL URLByAppendingPathComponent:kBreedsKey];
     NSURL *listURL = [breedsURL URLByAppendingPathComponent:kListKey];
-    NSURL *finalURL = [listURL URLByAppendingPathComponent:kAllKey];
+    NSURL *finalURL = [listURL URLByAppendingPathComponent:kAllKey];\
+    NSLog(@"%@", finalURL);
     
     [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error)
@@ -59,12 +60,12 @@ static NSString * const kImagesKey = @"images";
             return;
         }
         
-        NSDictionary *messagesDictionary = topLevelDictionary[@"messages"];
+        NSDictionary *messageDictionary = topLevelDictionary[@"message"];
         NSMutableArray *breeds = [NSMutableArray new];
-        for (id key in messagesDictionary)
+        for (id key in messageDictionary)
         {
-            NSMutableArray *subBreeds = [NSMutableArray new];
-            for (NSString *name in messagesDictionary[key])
+            NSMutableArray *subBreeds = [NSMutableArray<NSString *> new];
+            for (NSString *name in messageDictionary[key])
             {
                 JLSubBreed *subBreed = [[JLSubBreed alloc] initWithName:name imageURLs:[NSMutableArray new]];
                 [subBreeds addObject:subBreed];
