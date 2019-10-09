@@ -6,24 +6,34 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Dog Breeds-->
         <scene sceneID="WE8-zs-JcZ">
             <objects>
-                <tableViewController id="BvZ-lH-Bni" sceneMemberID="viewController">
+                <tableViewController id="BvZ-lH-Bni" customClass="JLBreedListTableViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SRO-gt-trB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="breedCell" id="Vzy-34-hMf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="breedCell" textLabel="YDL-08-4HT" style="IBUITableViewCellStyleDefault" id="Vzy-34-hMf">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vzy-34-hMf" id="OSv-dC-fIi">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YDL-08-4HT">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -32,11 +42,143 @@
                             <outlet property="delegate" destination="BvZ-lH-Bni" id="asU-Ym-EaP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="p9Z-Pi-X1Y"/>
+                    <navigationItem key="navigationItem" title="Dog Breeds" id="p9Z-Pi-X1Y"/>
+                    <connections>
+                        <segue destination="369-F3-Kgb" kind="show" identifier="toSubBreedVC" id="zro-Sz-qsx"/>
+                        <segue destination="bT6-iW-06M" kind="show" identifier="toImagesVC" id="RXM-vc-1C0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYN-uY-S3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="790" y="29"/>
+        </scene>
+        <!--Sub-Breed-->
+        <scene sceneID="OMP-It-YDs">
+            <objects>
+                <tableViewController title="Sub-Breed" id="369-F3-Kgb" customClass="JLSubBreedTableViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qDU-lO-LYD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subBreedCell" textLabel="ENv-En-sCL" style="IBUITableViewCellStyleDefault" id="8G2-s9-psi">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8G2-s9-psi" id="g0C-KJ-Oi6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ENv-En-sCL">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="369-F3-Kgb" id="ICq-bu-bfX"/>
+                            <outlet property="delegate" destination="369-F3-Kgb" id="OJB-ef-psF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-dM-nRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="-334"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="hN9-gU-ItB">
+            <objects>
+                <viewController id="2MT-UC-lPm" customClass="JLDetailViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HiX-ZN-h8x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="OYC-wY-rVA">
+                                <rect key="frame" x="53" y="195" width="308" height="508"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="G0E-Fa-Tso">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="407.66666666666669"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(dog name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTe-3c-bi1">
+                                        <rect key="frame" x="109.66666666666666" y="487.66666666666663" width="88.666666666666657" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OYC-wY-rVA" secondAttribute="height" multiplier="77:127" id="rKB-we-eve"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oCe-wR-SMr" firstAttribute="bottom" secondItem="OYC-wY-rVA" secondAttribute="bottom" constant="159" id="4zw-oU-HZH"/>
+                            <constraint firstItem="OYC-wY-rVA" firstAttribute="top" secondItem="oCe-wR-SMr" secondAttribute="top" constant="107" id="7yJ-aS-IxT"/>
+                            <constraint firstItem="oCe-wR-SMr" firstAttribute="trailing" secondItem="OYC-wY-rVA" secondAttribute="trailing" constant="53" id="fW9-0T-Ago"/>
+                            <constraint firstItem="OYC-wY-rVA" firstAttribute="leading" secondItem="oCe-wR-SMr" secondAttribute="leading" constant="53" id="sKE-fU-nvO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oCe-wR-SMr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-6b-j1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464" y="394"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="zil-b2-Egl">
+            <objects>
+                <collectionViewController title="Images" id="bT6-iW-06M" customClass="JLImageCollectionViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UkQ-oZ-oc3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zi0-Wm-nhN">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="xhE-wi-VyV">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="CmF-GC-YX4">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="CmF-GC-YX4" secondAttribute="height" multiplier="1:1" id="JP1-xx-42P"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="CmF-GC-YX4" firstAttribute="leading" secondItem="xhE-wi-VyV" secondAttribute="leading" id="Y24-VA-byF"/>
+                                    <constraint firstAttribute="trailing" secondItem="CmF-GC-YX4" secondAttribute="trailing" id="hiG-z2-yxV"/>
+                                    <constraint firstAttribute="bottom" secondItem="CmF-GC-YX4" secondAttribute="bottom" id="o7Y-eW-lHE"/>
+                                    <constraint firstItem="CmF-GC-YX4" firstAttribute="top" secondItem="xhE-wi-VyV" secondAttribute="top" id="tUv-bm-aus"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="2MT-UC-lPm" kind="show" identifier="toDetailVC" id="9oP-0B-hgB"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="bT6-iW-06M" id="OHr-yW-Cex"/>
+                            <outlet property="delegate" destination="bT6-iW-06M" id="VJv-Vm-0NG"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IuP-MU-rRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="irp-9Z-EWF">
@@ -57,4 +199,7 @@
             <point key="canvasLocation" x="5.7971014492753632" y="29.464285714285712"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dog" width="545" height="533"/>
+    </resources>
 </document>
