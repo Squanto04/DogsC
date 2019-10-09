@@ -12,6 +12,9 @@
 		35E07767234E71EA0011BAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E07766234E71EA0011BAE2 /* Assets.xcassets */; };
 		35E0776A234E71EA0011BAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E07768234E71EA0011BAE2 /* LaunchScreen.storyboard */; };
 		35E0776D234E71EA0011BAE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E0776C234E71EA0011BAE2 /* main.m */; };
+		35E07778234E72E10011BAE2 /* JLBreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07777234E72E10011BAE2 /* JLBreed.m */; };
+		35E0777C234E73250011BAE2 /* JLSubBreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E0777B234E73250011BAE2 /* JLSubBreed.m */; };
+		35E0777F234E792A0011BAE2 /* JLBreedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E0777E234E792A0011BAE2 /* JLBreedController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,12 @@
 		35E07769234E71EA0011BAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E0776B234E71EA0011BAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E0776C234E71EA0011BAE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35E07776234E72E10011BAE2 /* JLBreed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBreed.h; sourceTree = "<group>"; };
+		35E07777234E72E10011BAE2 /* JLBreed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBreed.m; sourceTree = "<group>"; };
+		35E0777A234E73250011BAE2 /* JLSubBreed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLSubBreed.h; sourceTree = "<group>"; };
+		35E0777B234E73250011BAE2 /* JLSubBreed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSubBreed.m; sourceTree = "<group>"; };
+		35E0777D234E792A0011BAE2 /* JLBreedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBreedController.h; sourceTree = "<group>"; };
+		35E0777E234E792A0011BAE2 /* JLBreedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBreedController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				35E07773234E71F10011BAE2 /* Sources */,
+				35E07779234E72E40011BAE2 /* Models */,
+				35E07780234E792E0011BAE2 /* Model Controllers */,
+				35E07784234E8C260011BAE2 /* View Controllers */,
 				35E07775234E72120011BAE2 /* Views */,
 				35E07774234E72080011BAE2 /* Resources */,
 			);
@@ -90,6 +102,33 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		35E07779234E72E40011BAE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35E07776234E72E10011BAE2 /* JLBreed.h */,
+				35E07777234E72E10011BAE2 /* JLBreed.m */,
+				35E0777A234E73250011BAE2 /* JLSubBreed.h */,
+				35E0777B234E73250011BAE2 /* JLSubBreed.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		35E07780234E792E0011BAE2 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35E0777D234E792A0011BAE2 /* JLBreedController.h */,
+				35E0777E234E792A0011BAE2 /* JLBreedController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		35E07784234E8C260011BAE2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,6 +155,7 @@
 		35E07752234E71E90011BAE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JL;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Squanto Inc";
 				TargetAttributes = {
@@ -161,7 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35E0776D234E71EA0011BAE2 /* main.m in Sources */,
+				35E0777C234E73250011BAE2 /* JLSubBreed.m in Sources */,
+				35E0777F234E792A0011BAE2 /* JLBreedController.m in Sources */,
 				35E0775F234E71E90011BAE2 /* AppDelegate.m in Sources */,
+				35E07778234E72E10011BAE2 /* JLBreed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
