@@ -13,7 +13,7 @@
         <!--Dog Breeds-->
         <scene sceneID="WE8-zs-JcZ">
             <objects>
-                <tableViewController id="BvZ-lH-Bni" customClass="JLBreedListTableViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BvZ-lH-Bni" customClass="JLBreedListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SRO-gt-trB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
         <!--Sub-Breed-->
         <scene sceneID="OMP-It-YDs">
             <objects>
-                <tableViewController title="Sub-Breed" id="369-F3-Kgb" customClass="JLSubBreedTableViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Sub-Breed" id="369-F3-Kgb" customClass="JLSubBreedsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qDU-lO-LYD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,9 @@
                             <outlet property="delegate" destination="369-F3-Kgb" id="OJB-ef-psF"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="bT6-iW-06M" kind="show" identifier="toImagesVCFromSubBreed" id="cux-db-KhC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-dM-nRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,15 +127,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oCe-wR-SMr"/>
                     </view>
+                    <connections>
+                        <outlet property="dogImageView" destination="G0E-Fa-Tso" id="NTZ-oY-bds"/>
+                        <outlet property="dogNameLabel" destination="QTe-3c-bi1" id="ZHy-yF-Uy2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-6b-j1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2464" y="394"/>
+            <point key="canvasLocation" x="2463.768115942029" y="393.75"/>
         </scene>
         <!--Images-->
         <scene sceneID="zil-b2-Egl">
             <objects>
-                <collectionViewController title="Images" id="bT6-iW-06M" customClass="JLImageCollectionViewController" customModule="Dogs_C" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Images" id="bT6-iW-06M" customClass="JLImageCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UkQ-oZ-oc3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +151,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="xhE-wi-VyV">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="xhE-wi-VyV" customClass="JLImageCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -166,6 +173,7 @@
                                     <constraint firstItem="CmF-GC-YX4" firstAttribute="top" secondItem="xhE-wi-VyV" secondAttribute="top" id="tUv-bm-aus"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="dogImageView" destination="CmF-GC-YX4" id="cay-12-6yS"/>
                                     <segue destination="2MT-UC-lPm" kind="show" identifier="toDetailVC" id="9oP-0B-hgB"/>
                                 </connections>
                             </collectionViewCell>
@@ -202,4 +210,7 @@
     <resources>
         <image name="dog" width="545" height="533"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cux-db-KhC"/>
+    </inferredMetricsTieBreakers>
 </document>

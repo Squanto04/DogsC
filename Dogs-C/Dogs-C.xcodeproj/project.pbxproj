@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35CA4895234EF01F003FDD94 /* JLBreedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA4894234EF01F003FDD94 /* JLBreedListTableViewController.m */; };
+		35CA4898234EF297003FDD94 /* JLSubBreedsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA4897234EF297003FDD94 /* JLSubBreedsTableViewController.m */; };
+		35CA489B234EF2F0003FDD94 /* JLImageCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA489A234EF2F0003FDD94 /* JLImageCollectionViewController.m */; };
+		35CA489E234EF307003FDD94 /* JLImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CA489D234EF307003FDD94 /* JLImageCollectionViewCell.m */; };
+		35CA48A4234EF836003FDD94 /* JLDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA48A3234EF836003FDD94 /* JLDetailViewController.swift */; };
 		35E0775F234E71E90011BAE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E0775E234E71E90011BAE2 /* AppDelegate.m */; };
 		35E07765234E71E90011BAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E07763234E71E90011BAE2 /* Main.storyboard */; };
 		35E07767234E71EA0011BAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E07766234E71EA0011BAE2 /* Assets.xcassets */; };
@@ -15,13 +20,19 @@
 		35E07778234E72E10011BAE2 /* JLBreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E07777234E72E10011BAE2 /* JLBreed.m */; };
 		35E0777C234E73250011BAE2 /* JLSubBreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E0777B234E73250011BAE2 /* JLSubBreed.m */; };
 		35E0777F234E792A0011BAE2 /* JLBreedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E0777E234E792A0011BAE2 /* JLBreedController.m */; };
-		35E0778A234E909A0011BAE2 /* JLBreedListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E07789234E909A0011BAE2 /* JLBreedListTableViewController.swift */; };
-		35E0778C234E90AD0011BAE2 /* JLSubBreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0778B234E90AD0011BAE2 /* JLSubBreedTableViewController.swift */; };
-		35E0778E234E90C70011BAE2 /* JLImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0778D234E90C70011BAE2 /* JLImageCollectionViewController.swift */; };
-		35E07790234E90DA0011BAE2 /* JLDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0778F234E90DA0011BAE2 /* JLDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35CA4893234EF01F003FDD94 /* JLBreedListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBreedListTableViewController.h; sourceTree = "<group>"; };
+		35CA4894234EF01F003FDD94 /* JLBreedListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBreedListTableViewController.m; sourceTree = "<group>"; };
+		35CA4896234EF297003FDD94 /* JLSubBreedsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLSubBreedsTableViewController.h; sourceTree = "<group>"; };
+		35CA4897234EF297003FDD94 /* JLSubBreedsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSubBreedsTableViewController.m; sourceTree = "<group>"; };
+		35CA4899234EF2F0003FDD94 /* JLImageCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLImageCollectionViewController.h; sourceTree = "<group>"; };
+		35CA489A234EF2F0003FDD94 /* JLImageCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLImageCollectionViewController.m; sourceTree = "<group>"; };
+		35CA489C234EF307003FDD94 /* JLImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLImageCollectionViewCell.h; sourceTree = "<group>"; };
+		35CA489D234EF307003FDD94 /* JLImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLImageCollectionViewCell.m; sourceTree = "<group>"; };
+		35CA48A2234EF835003FDD94 /* Dogs-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dogs-C-Bridging-Header.h"; sourceTree = "<group>"; };
+		35CA48A3234EF836003FDD94 /* JLDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDetailViewController.swift; sourceTree = "<group>"; };
 		35E0775A234E71E90011BAE2 /* Dogs-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dogs-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E0775D234E71E90011BAE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35E0775E234E71E90011BAE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,11 +47,6 @@
 		35E0777B234E73250011BAE2 /* JLSubBreed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLSubBreed.m; sourceTree = "<group>"; };
 		35E0777D234E792A0011BAE2 /* JLBreedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLBreedController.h; sourceTree = "<group>"; };
 		35E0777E234E792A0011BAE2 /* JLBreedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLBreedController.m; sourceTree = "<group>"; };
-		35E07788234E909A0011BAE2 /* Dogs-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dogs-C-Bridging-Header.h"; sourceTree = "<group>"; };
-		35E07789234E909A0011BAE2 /* JLBreedListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLBreedListTableViewController.swift; sourceTree = "<group>"; };
-		35E0778B234E90AD0011BAE2 /* JLSubBreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLSubBreedTableViewController.swift; sourceTree = "<group>"; };
-		35E0778D234E90C70011BAE2 /* JLImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLImageCollectionViewController.swift; sourceTree = "<group>"; };
-		35E0778F234E90DA0011BAE2 /* JLDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 			children = (
 				35E07763234E71E90011BAE2 /* Main.storyboard */,
 				35E07768234E71EA0011BAE2 /* LaunchScreen.storyboard */,
+				35CA489C234EF307003FDD94 /* JLImageCollectionViewCell.h */,
+				35CA489D234EF307003FDD94 /* JLImageCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,11 +142,14 @@
 		35E07784234E8C260011BAE2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				35E07789234E909A0011BAE2 /* JLBreedListTableViewController.swift */,
-				35E0778B234E90AD0011BAE2 /* JLSubBreedTableViewController.swift */,
-				35E0778D234E90C70011BAE2 /* JLImageCollectionViewController.swift */,
-				35E0778F234E90DA0011BAE2 /* JLDetailViewController.swift */,
-				35E07788234E909A0011BAE2 /* Dogs-C-Bridging-Header.h */,
+				35CA4893234EF01F003FDD94 /* JLBreedListTableViewController.h */,
+				35CA4894234EF01F003FDD94 /* JLBreedListTableViewController.m */,
+				35CA4896234EF297003FDD94 /* JLSubBreedsTableViewController.h */,
+				35CA4897234EF297003FDD94 /* JLSubBreedsTableViewController.m */,
+				35CA4899234EF2F0003FDD94 /* JLImageCollectionViewController.h */,
+				35CA489A234EF2F0003FDD94 /* JLImageCollectionViewController.m */,
+				35CA48A3234EF836003FDD94 /* JLDetailViewController.swift */,
+				35CA48A2234EF835003FDD94 /* Dogs-C-Bridging-Header.h */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -215,15 +226,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CA489B234EF2F0003FDD94 /* JLImageCollectionViewController.m in Sources */,
+				35CA48A4234EF836003FDD94 /* JLDetailViewController.swift in Sources */,
+				35CA4898234EF297003FDD94 /* JLSubBreedsTableViewController.m in Sources */,
+				35CA4895234EF01F003FDD94 /* JLBreedListTableViewController.m in Sources */,
 				35E0776D234E71EA0011BAE2 /* main.m in Sources */,
-				35E07790234E90DA0011BAE2 /* JLDetailViewController.swift in Sources */,
-				35E0778C234E90AD0011BAE2 /* JLSubBreedTableViewController.swift in Sources */,
 				35E0777C234E73250011BAE2 /* JLSubBreed.m in Sources */,
-				35E0778A234E909A0011BAE2 /* JLBreedListTableViewController.swift in Sources */,
-				35E0778E234E90C70011BAE2 /* JLImageCollectionViewController.swift in Sources */,
 				35E0777F234E792A0011BAE2 /* JLBreedController.m in Sources */,
 				35E0775F234E71E90011BAE2 /* AppDelegate.m in Sources */,
 				35E07778234E72E10011BAE2 /* JLBreed.m in Sources */,
+				35CA489E234EF307003FDD94 /* JLImageCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

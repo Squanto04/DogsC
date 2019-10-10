@@ -10,7 +10,6 @@
 #import "JLBreed.h"
 #import "JLSubBreed.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface JLBreedController : NSObject
 
@@ -20,10 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchBreedImageURLs:(JLBreed *)breed completion:(void(^)(NSArray<NSString *> *breedImageURLs))completion;
 
-- (void)fetchSubBreedImageURLs:(JLBreed *)breed subBreed:(JLSubBreed *)subBreed completion:(void(^)(NSArray<NSString *> *breedImageURLs))completion;
+- (void)fetchSubBreedImageURLs:(JLSubBreed *)subBreed breed:(JLBreed *)breed completion:(void (^) (NSArray *))completion;
 
 - (void)fetchImageData:(NSURL *)url completion:(void(^) (NSData *imageData, NSError *error))completion;
 
 @end
 
-NS_ASSUME_NONNULL_END

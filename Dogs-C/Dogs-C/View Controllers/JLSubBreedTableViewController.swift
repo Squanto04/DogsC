@@ -10,7 +10,11 @@ import UIKit
 
 class JLSubBreedTableViewController: UITableViewController {
     
-    var breeds: JLBreed?
+    var breeds: JLBreed? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,22 +24,15 @@ class JLSubBreedTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let breeds = breeds {
-            return breeds.subBreeds.count
-        } else {
-            return 0
-        }
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "subBreedCell", for: indexPath)
-        if let breeds = breeds {
-            let subBreeds = breeds.subBreeds[indexPath.row]
-            cell.textLabel?.text =
-            return cell
-        } else {
-        return UITableViewCell()
-        }
+        guard let breeds = breeds else { return UITableViewCell() }
+        let subBreeds = breeds.subBreeds[indexPath.row]
+        cell.textLabel?.text = subBreeds
+        return cell
     }
 
     // MARK: - Navigation

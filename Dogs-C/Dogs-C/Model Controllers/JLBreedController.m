@@ -33,7 +33,6 @@ static NSString * const kImagesKey = @"images";
     NSURL *breedsURL = [baseURL URLByAppendingPathComponent:kBreedsKey];
     NSURL *listURL = [breedsURL URLByAppendingPathComponent:kListKey];
     NSURL *finalURL = [listURL URLByAppendingPathComponent:kAllKey];\
-    NSLog(@"%@", finalURL);
     
     [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error)
@@ -114,7 +113,7 @@ static NSString * const kImagesKey = @"images";
     }] resume];
 }
 
-- (void)fetchSubBreedImageURLs:(JLBreed *)breed subBreed:(JLSubBreed *)subBreed completion:(void (^)(NSArray<NSString *> * _Nullable))completion
+- (void)fetchSubBreedImageURLs:(JLSubBreed *)subBreed breed:(JLBreed *)breed completion:(void (^) (NSArray *))completion;
 {
     // Goal URL: https://dog.ceo/api/breed/hound/basset/images
     NSURL *baseURL = [NSURL URLWithString:kBaseURLString];
@@ -122,6 +121,7 @@ static NSString * const kImagesKey = @"images";
     NSURL *breedURL = [breedKeyURL URLByAppendingPathComponent:breed.name];
     NSURL *subBreedURL = [breedURL URLByAppendingPathComponent:subBreed.name];
     NSURL *finalURL = [subBreedURL URLByAppendingPathComponent:kImagesKey];
+    NSLog(@"%@", finalURL);
     
     [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error)
@@ -146,7 +146,7 @@ static NSString * const kImagesKey = @"images";
             completion(nil);
             return;
         }
-        NSMutableArray *images = topLevelDictionary[@"images"];
+        NSMutableArray *images = topLevelDictionary[@"message"];
         completion(images);
         
     }] resume];

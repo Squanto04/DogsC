@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JLSubBreed : NSObject
-
 
 @property (nonatomic, copy, readonly) NSString * name;
 @property (nonatomic, copy, readonly) NSArray * imageURLs;
@@ -21,4 +18,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END

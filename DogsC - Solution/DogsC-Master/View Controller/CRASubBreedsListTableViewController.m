@@ -65,7 +65,6 @@
         CRAImagesCollectionViewController *destinationVC = segue.destinationViewController;
         destinationVC.subBreed = subBreed;
         destinationVC.breed = self.breed;
-        
     }
 }
 @end
